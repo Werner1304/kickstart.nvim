@@ -8,6 +8,7 @@ vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, { desc = '[F]ind [f]iles' })
 vim.keymap.set('n', '<leader>fb', vim.lsp.buf.format, { desc = '[F]ind [b]uffer' })
+vim.keymap.set('n', '<leader>t', vim.cmd.Ex, { desc = '[T]ree' })
 
 
 return {}
