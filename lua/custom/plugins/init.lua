@@ -3,7 +3,13 @@
 --
 -- See the kickstart.nvim README for more information
 
-
+vim.api.nvim_create_autocmd('filetype',{
+							pattern = 'netrw',
+							callback = function()
+								vim.keymap.set('n', 'f', '%', {remap = true, buffer = true})
+								vim.keymap.set('n', 'r', 'R', {remap = true, buffer = true})
+							end
+							})
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, { desc = '[F]ind [f]iles' })
