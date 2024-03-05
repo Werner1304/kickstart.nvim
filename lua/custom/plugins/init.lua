@@ -18,5 +18,4 @@ vim.keymap.set('n', '<leader>t', vim.cmd.Ex, { desc = '[T]ree' })
 vim.keymap.set('n', '<leader>sv', vim.cmd.vsplit, { desc = '[S]plit [v]ertical' })
 vim.keymap.set('n', '<leader>sh', vim.cmd.split, { desc = '[S]plit [h]orizontal' })
 
-
 return {}
